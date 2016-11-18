@@ -1,3 +1,10 @@
+A little walkthrough for deploying Theano with GPU support in Windows 10.
+
+**Hardware info**
++ GPU: NVIDIA GeForce GTX 750 Ti
++ CPU: Intel Core i5-4590 CPU 3.30GHz
++ Memory: 16G
+
 #Step 1
 First make sure you have Visual Studio 2012 & CUDA 8.0 installed (VS2015 doesn't support cuda 8.0 yet)
 #step 2
@@ -8,7 +15,7 @@ Open windows CMD, type
 conda install mingw libpython
 ```
 
-to install C++ compiler for python and GCC as they are dependencies for theano (according to "Alternative: Anaconda" in ref1)
+to install C++ compiler for python and GCC as they are dependencies for theano (according to "Alternative: Anaconda" in [Ref1](http://deeplearning.net/software/theano/install_windows.html))
 #Step 4
 Install theano and lasagne (or just theano)
 
@@ -40,7 +47,7 @@ cnmem = 0.8
 flags=-LC:\Users\andefjx\Anaconda2\libs
 compiler_bindir=C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\amd64
 ```
-Make sure to change the path in **flags** *C:\Users\andefjx\Anaconda2\libs* into your Anaconda installation directory and **compiler_bindir** to the path with **cl.exe** in it. (according to ref3)
+Make sure to change the path in **flags** *C:\Users\andefjx\Anaconda2\libs* into your Anaconda installation directory and **compiler_bindir** to the path with **cl.exe** in it. (according to [Ref3](https://lepisma.github.io/articles/2015/07/30/up-with-theano-and-cuda/))
 #Step 7
 Then if you type *```import theano```*, you can get information about your gpu. 
 
